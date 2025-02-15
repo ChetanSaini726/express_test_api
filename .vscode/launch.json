@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch via NPM",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run-script",
+                "${input:scriptName}"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        }
+    ],
+    "inputs": [
+        {
+            "type": "pickString",
+            "id": "scriptName",
+            "description": "Select the npm script to run",
+            "options": [
+                "start",
+                "watch"
+            ]
+        }
+    ]
+}
